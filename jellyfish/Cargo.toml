@@ -1,0 +1,14 @@
+[package]
+name = "jellyfish"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[profile.release-small]
+inherits = "release"
+lto = "thin"
+codegen-units = 1
+strip = "symbols"
+panic = "abort"
+
